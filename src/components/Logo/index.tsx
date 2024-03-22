@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 export type LogoProps = {
-  color?: 'while' | 'black'
+  color?: 'white' | 'black'
 }
 
 const Logo = ({ color = 'white' }: LogoProps) => (
