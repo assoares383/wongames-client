@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-import { LogoProps } from './'
+import { LogoProps } from '.'
 
 const wrapperModifiers = {
   normal: () => css`
@@ -23,14 +23,14 @@ const wrapperModifiers = {
       }
 
       .text {
-        display: none !important;
+        display: none;
       }
     `}
   `
 }
 
 export const Wrapper = styled.div<LogoProps>`
-  ${({ theme, color, size, hideOnMobile }) => css`
+  ${({ theme, color = 'white', size, hideOnMobile }) => css`
     color: ${theme.colors[color!]};
 
     ${!!size && wrapperModifiers[size]}
