@@ -4,6 +4,7 @@ import { Search as SearchIcon } from '@styled-icons/material-outlined/Search'
 import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outlined/ShoppingCart'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
+import Button from '../Button'
 import Logo from '../Logo'
 
 import * as S from './styles'
@@ -29,6 +30,20 @@ const Menu = () => {
       </S.MenuGroup>
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
+        <S.MenuNav>
+          <S.MenuLink href="#">Home</S.MenuLink>
+          <S.MenuLink href="#">Explore</S.MenuLink>
+        </S.MenuNav>
+
+        <S.RegisterBox>
+          <Button fullWidth size="large">
+            LogIn now
+          </Button>
+          <span>or</span>
+          <S.CreateAccount href="#" title="Sign In">
+            Sign Up
+          </S.CreateAccount>
+        </S.RegisterBox>
       </S.MenuFull>
     </S.Wrapper>
   )

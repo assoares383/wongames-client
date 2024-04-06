@@ -1,4 +1,4 @@
-import { Story, Meta } from '@storybook/react'
+import { Meta } from '@storybook/react'
 import Menu from '.'
 
 export default {
@@ -6,4 +6,11 @@ export default {
   component: Menu
 } as Meta
 
-export const Basic: Story = () => <Menu />
+export const Default = () => <Menu />
+
+Default.parameters = {
+  layout: 'fullscreen',
+  backgrounds: {
+    default: 'dark'
+  }
+}
